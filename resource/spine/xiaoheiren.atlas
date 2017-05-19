@@ -1,0 +1,111 @@
+
+xiaoheiren.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lgebo1
+  rotate: true
+  xy: 137, 57
+  size: 33, 46
+  orig: 33, 46
+  offset: 0, 0
+  index: -1
+Lgebo2
+  rotate: true
+  xy: 77, 26
+  size: 24, 49
+  orig: 24, 49
+  offset: 0, 0
+  index: -1
+Ljiao
+  rotate: false
+  xy: 137, 92
+  size: 59, 34
+  orig: 59, 34
+  offset: 0, 0
+  index: -1
+Lshou
+  rotate: false
+  xy: 291, 66
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Ltui1
+  rotate: true
+  xy: 255, 101
+  size: 25, 53
+  orig: 25, 53
+  offset: 0, 0
+  index: -1
+Ltui2
+  rotate: true
+  xy: 310, 101
+  size: 25, 51
+  orig: 25, 51
+  offset: 0, 0
+  index: -1
+Rgebo1
+  rotate: true
+  xy: 416, 103
+  size: 23, 52
+  orig: 23, 52
+  offset: 0, 0
+  index: -1
+Rgebo2
+  rotate: true
+  xy: 198, 71
+  size: 29, 49
+  orig: 29, 49
+  offset: 0, 0
+  index: -1
+Rjiao
+  rotate: false
+  xy: 2, 2
+  size: 60, 35
+  orig: 60, 35
+  offset: 0, 0
+  index: -1
+Rshou
+  rotate: true
+  xy: 470, 92
+  size: 34, 40
+  orig: 34, 40
+  offset: 0, 0
+  index: -1
+Rtui1
+  rotate: true
+  xy: 198, 102
+  size: 24, 55
+  orig: 24, 55
+  offset: 0, 0
+  index: -1
+Rtui2
+  rotate: true
+  xy: 363, 100
+  size: 26, 51
+  orig: 26, 51
+  offset: 0, 0
+  index: -1
+neiku
+  rotate: false
+  xy: 249, 67
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 77, 52
+  size: 58, 74
+  orig: 58, 74
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 2, 39
+  size: 73, 87
+  orig: 73, 87
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CFD7316B-5080-481C-AED1-86AAC888ABEB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Feena</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\vs-workspace\ZDBM\Feena\Feena;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\vs-workspace\SFML-2.4.2-windows-vc12-32-bit\SFML-2.4.2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>E:\vs-workspace\SFML-2.4.2-windows-vc12-32-bit\SFML-2.4.2\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\Base;..\Feena;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Base.lib;sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;spine-c.lib;opengl32.lib;freetype.lib;winmm.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="biz\data\base\physics\PhysicalDefine.h" />
+    <ClInclude Include="framework\spine\spine-sfml.h" />
+    <ClInclude Include="framework\state\BaseState.h" />
+    <ClInclude Include="biz\GameDefine.h" />
+    <ClInclude Include="framework\CommonDefine.h" />
+    <ClInclude Include="framework\event\EventDefines.h" />
+    <ClInclude Include="framework\event\EventManager.h" />
+    <ClInclude Include="framework\state\StateDefines.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="framework\state\ListenerState.h" />
+    <ClInclude Include="biz\data\base\physics\PhysicalBody.h" />
+    <ClInclude Include="biz\data\GameWorld.h" />
+    <ClInclude Include="biz\data\base\GameObject.h" />
+    <ClInclude Include="biz\data\Hero.h" />
+    <ClInclude Include="biz\data\StaticBlocker.h" />
+    <ClInclude Include="SFML\Audio.hpp" />
+    <ClInclude Include="SFML\Audio\AlResource.hpp" />
+    <ClInclude Include="SFML\Audio\Export.hpp" />
+    <ClInclude Include="SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="SFML\Audio\Listener.hpp" />
+    <ClInclude Include="SFML\Audio\Music.hpp" />
+    <ClInclude Include="SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="SFML\Audio\Sound.hpp" />
+    <ClInclude Include="SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="SFML\Config.hpp" />
+    <ClInclude Include="SFML\Graphics.hpp" />
+    <ClInclude Include="SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="SFML\Graphics\CircleShape.hpp" />
+    <ClInclude Include="SFML\Graphics\Color.hpp" />
+    <ClInclude Include="SFML\Graphics\ConvexShape.hpp" />
+    <ClInclude Include="SFML\Graphics\Drawable.hpp" />
+    <ClInclude Include="SFML\Graphics\Export.hpp" />
+    <ClInclude Include="SFML\Graphics\Font.hpp" />
+    <ClInclude Include="SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="SFML\Graphics\Image.hpp" />
+    <ClInclude Include="SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="SFML\Graphics\RectangleShape.hpp" />
+    <ClInclude Include="SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="SFML\Graphics\Shape.hpp" />
+    <ClInclude Include="SFML\Graphics\Sprite.hpp" />
+    <ClInclude Include="SFML\Graphics\Text.hpp" />
+    <ClInclude Include="SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="SFML\Graphics\VertexArray.hpp" />
+    <ClInclude Include="SFML\Graphics\View.hpp" />
+    <ClInclude Include="SFML\Main.hpp" />
+    <ClInclude Include="SFML\Network.hpp" />
+    <ClInclude Include="SFML\Network\Export.hpp" />
+    <ClInclude Include="SFML\Network\Ftp.hpp" />
+    <ClInclude Include="SFML\Network\Http.hpp" />
+    <ClInclude Include="SFML\Network\IpAddress.hpp" />
+    <ClInclude Include="SFML\Network\Packet.hpp" />
+    <ClInclude Include="SFML\Network\Socket.hpp" />
+    <ClInclude Include="SFML\Network\SocketHandle.hpp" />
+    <ClInclude Include="SFML\Network\SocketSelector.hpp" />
+    <ClInclude Include="SFML\Network\TcpListener.hpp" />
+    <ClInclude Include="SFML\Network\TcpSocket.hpp" />
+    <ClInclude Include="SFML\Network\UdpSocket.hpp" />
+    <ClInclude Include="SFML\OpenGL.hpp" />
+    <ClInclude Include="SFML\System.hpp" />
+    <ClInclude Include="SFML\System\Clock.hpp" />
+    <ClInclude Include="SFML\System\Err.hpp" />
+    <ClInclude Include="SFML\System\Export.hpp" />
+    <ClInclude Include="SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="SFML\System\InputStream.hpp" />
+    <ClInclude Include="SFML\System\Lock.hpp" />
+    <ClInclude Include="SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="SFML\System\Mutex.hpp" />
+    <ClInclude Include="SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="SFML\System\NonCopyable.hpp" />
+    <ClInclude Include="SFML\System\Sleep.hpp" />
+    <ClInclude Include="SFML\System\String.hpp" />
+    <ClInclude Include="SFML\System\Thread.hpp" />
+    <ClInclude Include="SFML\System\ThreadLocal.hpp" />
+    <ClInclude Include="SFML\System\ThreadLocalPtr.hpp" />
+    <ClInclude Include="SFML\System\Time.hpp" />
+    <ClInclude Include="SFML\System\Utf.hpp" />
+    <ClInclude Include="SFML\System\Vector2.hpp" />
+    <ClInclude Include="SFML\System\Vector3.hpp" />
+    <ClInclude Include="SFML\Window.hpp" />
+    <ClInclude Include="SFML\Window\Context.hpp" />
+    <ClInclude Include="SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="SFML\Window\Event.hpp" />
+    <ClInclude Include="SFML\Window\Export.hpp" />
+    <ClInclude Include="SFML\Window\GlResource.hpp" />
+    <ClInclude Include="SFML\Window\Joystick.hpp" />
+    <ClInclude Include="SFML\Window\Keyboard.hpp" />
+    <ClInclude Include="SFML\Window\Mouse.hpp" />
+    <ClInclude Include="SFML\Window\Sensor.hpp" />
+    <ClInclude Include="SFML\Window\Touch.hpp" />
+    <ClInclude Include="SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="SFML\Window\Window.hpp" />
+    <ClInclude Include="SFML\Window\WindowHandle.hpp" />
+    <ClInclude Include="SFML\Window\WindowStyle.hpp" />
+    <ClInclude Include="framework\state\StateManager.h" />
+    <ClInclude Include="framework\state\StateIntro.h" />
+    <ClInclude Include="framework\state\StateMainManu.h" />
+    <ClInclude Include="framework\state\StateGaming.h" />
+    <ClInclude Include="framework\state\StatePaused.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="framework\GameWindow.h" />
+    <ClInclude Include="biz\data\Unit.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="biz\data\base\physics\PhysicalDefine.cpp" />
+    <ClCompile Include="framework\spine\spine-sfml.cpp" />
+    <ClCompile Include="framework\state\BaseState.cpp" />
+    <ClCompile Include="framework\event\EventManager.cpp" />
+    <ClCompile Include="Feena.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="framework\state\StateManager.cpp" />
+    <ClCompile Include="framework\state\StateIntro.cpp" />
+    <ClCompile Include="framework\state\StateMainManu.cpp" />
+    <ClCompile Include="framework\state\StateGaming.cpp" />
+    <ClCompile Include="framework\state\StatePaused.cpp" />
+    <ClCompile Include="framework\state\ListenerState.cpp" />
+    <ClCompile Include="biz\data\base\physics\PhysicalBody.cpp" />
+    <ClCompile Include="biz\data\GameWorld.cpp" />
+    <ClCompile Include="biz\data\base\GameObject.cpp" />
+    <ClCompile Include="biz\data\Hero.cpp" />
+    <ClCompile Include="biz\data\StaticBlocker.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="framework\GameWindow.cpp" />
+    <ClCompile Include="biz\data\Unit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SFML\Audio\SoundFileFactory.inl" />
+    <None Include="SFML\Graphics\Glsl.inl" />
+    <None Include="SFML\Graphics\Rect.inl" />
+    <None Include="SFML\System\String.inl" />
+    <None Include="SFML\System\Thread.inl" />
+    <None Include="SFML\System\ThreadLocalPtr.inl" />
+    <None Include="SFML\System\Utf.inl" />
+    <None Include="SFML\System\Vector2.inl" />
+    <None Include="SFML\System\Vector3.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
